@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
    <head>
         <meta charset="UTF-8">
         <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
@@ -29,8 +29,146 @@
                 "url": "https://nuudlman.github.io"
             }
         </script>
+        <style>
+            body {
+                font-family: sans-serif;
+                background-color: #f0f0f0;
+                margin: 0;
+                padding: 20px;
+            }
+            #masonry-grid {
+                column-count: 3;
+                column-gap: 20px;
+            }
+            @media (max-width: 800px) {
+                #masonry-grid {
+                    column-count: 2;
+                }
+            }
+            @media (max-width: 500px) {
+                #masonry-grid {
+                    column-count: 1;
+                }
+            }
+            .card {
+                background-color: white;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                margin-bottom: 20px;
+                break-inside: avoid;
+                overflow: hidden;
+                transition: all 0.3s ease;
+            }
+            .card:hover {
+                box-shadow: 0 0 20px rgba(0, 102, 204, 0.5);
+                transform: translateY(-5px);
+            }
+            .card img {
+                max-width: 100%;
+                display: block;
+                transition: all 0.3s ease;
+            }
+            .card:hover img {
+                filter: brightness(1.1);
+            }
+            .card-content {
+                padding: 15px;
+            }
+            .card-content h3 {
+                margin: 0 0 10px;
+                font-size: 18px;
+            }
+            .card-content p {
+                margin: 0;
+                color: #666;
+            }
+            a {
+                text-decoration: none;
+                color: #0066cc;
+                transition: all 0.3s ease;
+                position: relative;
+                display: inline-block;
+            }
+            a:hover {
+                color: #004499;
+                text-shadow: 0 0 5px rgba(0, 102, 204, 0.7);
+            }
+            a::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                bottom: -2px;
+                left: 0;
+                background-color: #0066cc;
+                visibility: hidden;
+                transform: scaleX(0);
+                transition: all 0.3s ease-in-out;
+            }
+            a:hover::after {
+                visibility: visible;
+                transform: scaleX(1);
+                box-shadow: 0 0 5px rgba(0, 102, 204, 0.7);
+            }
+        </style>
     </head>
     <body>
-
+        <main>
+            <nav>
+                <a href="https://nudelman.xyz" target="_blank" rel="noreferrer noopener">Personal Website</a>
+            </nav>
+            <hr>
+            <h1>Kitten and Puppy Gallery</h1>
+            <div id="masonry-grid">
+                <div class="card">
+                    <img src="https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg" alt="Cute kitten">
+                    <div class="card-content">
+                        <h3>Adorable Kitten</h3>
+                        <p>A fluffy orange kitten with curious blue eyes.</p>
+                        <a href="#">Learn more about kittens</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://cdn.pixabay.com/photo/2016/12/13/05/15/puppy-1903313_1280.jpg" alt="Playful puppy">
+                    <div class="card-content">
+                        <h3>Playful Puppy</h3>
+                        <p>A happy Golden Retriever puppy in the grass.</p>
+                        <a href="#">Discover puppy care tips</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://cdn.pixabay.com/photo/2017/07/25/01/22/cat-2536662_1280.jpg" alt="Sleepy kitten">
+                    <div class="card-content">
+                        <h3>Sleepy Kitten</h3>
+                        <p>A tiny gray kitten taking a nap on a soft blanket.</p>
+                        <a href="#">Explore kitten sleeping habits</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://cdn.pixabay.com/photo/2016/07/15/15/55/dachshund-1519374_1280.jpg" alt="Curious puppy">
+                    <div class="card-content">
+                        <h3>Curious Puppy</h3>
+                        <p>A Dachshund puppy tilting its head in curiosity.</p>
+                        <a href="#">Read about puppy training</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://cdn.pixabay.com/photo/2014/11/30/14/11/cat-551554_1280.jpg" alt="Mischievous kitten">
+                    <div class="card-content">
+                        <h3>Mischievous Kitten</h3>
+                        <p>A black and white kitten with playful green eyes.</p>
+                        <a href="#">Find kitten toys and accessories</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://cdn.pixabay.com/photo/2016/05/09/10/42/weimaraner-1381186_1280.jpg" alt="Friendly puppy">
+                    <div class="card-content">
+                        <h3>Friendly Puppy</h3>
+                        <p>A smiling Weimaraner puppy looking at the camera.</p>
+                        <a href="#">Learn about puppy socialization</a>
+                    </div>
+                </div>
+            </div>
+        </main>
     </body> 
 </html>
